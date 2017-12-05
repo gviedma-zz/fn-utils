@@ -27,3 +27,8 @@ flow_await() {
   stage=${2:-0}
   curl $CURL_FLAGS -XGET http://$FLOW_SERVER/v1/flows/$tid/stages/$stage/await -H 'Content-Type: text/json; charset=utf-8'
 }
+
+flow_commit() {
+  tid=${1:-$FID}
+  curl $CURL_FLAGS -XPOST http://$FLOW_SERVER/v1/flows/$tid/commit
+}
