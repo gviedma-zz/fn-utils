@@ -1,5 +1,5 @@
 #!/bin/sh
-set -x
+set -ex
 
 echo Installing Docker CE
 
