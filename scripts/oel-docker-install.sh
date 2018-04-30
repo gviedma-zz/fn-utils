@@ -35,8 +35,8 @@ sudo yum -y install docker-ce
 # Add opc user to docker group
 sudo usermod -aG docker $USER
 
-# applies user group changes
-su - $USER
+# applies user group changes by logging in again
+sudo su - $USER 
 
 # Configure Docker to start on boot
 sudo systemctl enable docker
