@@ -8,7 +8,7 @@ echo Installing Docker CE
 ### https://docs.docker.com/install/linux/linux-postinstall/
 
 # uninstall prior versions of Docker
-sudo yum remove docker \
+sudo yum -y remove docker \
                   docker-client \
                   docker-client-latest \
                   docker-common \
@@ -20,7 +20,7 @@ sudo yum remove docker \
                   docker-engine
 
 # Install required packages
-sudo yum install -y yum-utils \
+sudo yum -y install yum-utils \
   device-mapper-persistent-data \
   lvm2
 
@@ -30,7 +30,7 @@ sudo yum-config-manager \
     https://download.docker.com/linux/centos/docker-ce.repo
 
 # install Docker CE
-sudo yum install docker-ce
+sudo yum -y install docker-ce
 
 # Add opc user to docker group
 sudo usermod -aG docker $USER
